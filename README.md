@@ -56,15 +56,15 @@ pip install scikit-image
 pip install face-alignment
 
 ```
-- For make crop size of `160x160` for Arcface (`128x128`) and FaceNet (`160x160`), we change reference points as follow.
+- For make crop size of `160x160` for Arcface (`128x128`) and FaceNet (`160x160`), the reference points are as follow.
 ```python
 ref_pts = [ [61.4356, 54.6963],[118.5318, 54.6963], [93.5252, 90.7366],[68.5493, 122.3655],[110.7299, 122.3641]]
 crop_size = (160, 160)
 ```
 
-2. Create a folder including all persons (folders: name of person) and put it to '/data' 
-3. Create a `txt` file with format: `[image_path],[label]` of that folder (See [lfw file](data_files/full/lfw_128.txt) for details)
-4. Modify [face loader](data_loader/facedata_loader.py): Add your `txt` file in function: `get_face_dataloader`. 
+1. Create a folder including all persons (folders: name of person) and put it to '/data' 
+2. Create a `txt` file with format: `[image_path],[label]` of that folder (See [lfw file](data_files/full/lfw_128.txt) for details)
+3. Modify [face loader](data_loader/facedata_loader.py): Add your `txt` file in function: `get_face_dataloader`. 
 
 
 ## References
