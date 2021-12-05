@@ -7,7 +7,7 @@ from PIL import Image
 
 torch.multiprocessing.set_sharing_strategy('file_system')
 
-from face_models.facenet_pytorch import MTCNN, InceptionResnetV1
+from face_models.facenet_pytorch import InceptionResnetV1
 from face_models.resnet import *
 from face_models.net_cos import *
 from utils.emd import emd_similarity

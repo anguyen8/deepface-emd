@@ -27,22 +27,30 @@ mkdir pretrained
 - Extract LFW datasets (e.g. `lfw_crop_96x112.tar.gz`) to `data/`
 - Copy models (e.g. `resnet18_110.pth`) to `pretrained/` 
 
-## How to run
+## How to run small exmaples
 - Run testing LFW images
 
 ```
 bash run_test.sh
 ```
 
-- Run demo 
+- Run demo: The demo gives results of top-5 images of stage 1 and stage 2.
 ```
-bash run_test.sh
+bash run_demo.sh
 ```
+## How to run small exmaples
 
-- Run visualization with two images
+- Change `args.data_folder` to `data` in `.sh` files.
+
+## Run visualization with two images
 
 ```
 python visualize_faces.py -method [methods] -fm [face models] -model_path [model dir] -in1 [1st image] -in2 [2nd image] -weight [1/0: showing weight heatmaps] 
 ```
+
+## Modify with your own dataset.
+- Create a folder including all persons (folders: name of person) and put it to '/data' 
+- Create a `txt` file with format: `[image_path],[label]` of that folder (See [lfw file](data_files/full/lfw_128.txt) for details)
+- Modify [face loader](data_loader/facedata_loader.py): Add your `txt` file in function: `get_face_dataloader`. 
 
 
