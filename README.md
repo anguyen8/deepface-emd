@@ -2,4 +2,5 @@
 
 `Official Implementation` for the paper "DeepFace-EMD: Re-ranking Using Patch-wise Earth Mover’s Distance Improves Out-Of-Distribution Face Identification" , by Hai Phan and Anh Nguyen.
 
-![](framework.png)
+![](figs/framework.png) 
+![](figs/results.png) 
