@@ -49,7 +49,7 @@ python visualize_faces.py -method [methods] -fm [face models] -model_path [model
 ```
 
 ## Modify with your own dataset.
-1. Facial alignment. See [align_face.py](align_face.py) for details.
+1. Facial alignment. See [align_face.py](alignment/align_face.py) for details.
 - Install [face_alignment](https://github.com/1adrianb/face-alignment) to extract landmarks. 
 ```
 pip install scikit-image
@@ -72,3 +72,4 @@ crop_size = (160, 160)
 2. J.  Deng,   J. Guo,   X. Niannan,   and   StefanosZafeiriou.   Arcface:  Additive angular margin loss for deepface recognition. CVPR 2019.[Arcface Pytorch](https://github.com/ronghuaiyang/arcface-pytorch)
 3. H.  Wang,  Y. Wang,  Z. Zhou,  X. Ji,  DihongGong,  J. Zhou,  Z. Li,  W. Liu.   Cosface:Large margin cosine loss for deep face recognition. CVPR 2018 [CosFace Pytorch](https://github.com/MuggleWang/CosFace_pytorch)
 4. F. Schroff,  D. Kalenichenko, J. Philbin.Facenet: A unified embedding for face recognition and clus-tering. CVPR 2015 [FaceNet Pytorch](https://github.com/timesler/facenet-pytorch)
+5. L. Weiyang and W. Yandong and Y. Zhiding and L. Ming and R. Bhiksha, S. Le. SphereFace: Deep Hypersphere Embedding for Face Recognition. CVPR 2017. [sphereface](https://github.com/wy1iu/sphereface), [sphereface pytorch](https://github.com/clcarwin/sphereface_pytorch)

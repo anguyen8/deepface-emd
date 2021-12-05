@@ -13,7 +13,6 @@ import argparse
 import numpy as np
 import zipfile
 
-from dataset import ImageDataset
 from matlab_cp2tform import get_similarity_transform_for_cv2
 
 import face_alignment
