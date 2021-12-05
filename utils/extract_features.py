@@ -1,5 +1,5 @@
 import torch 
-from tqdm import tqdm, trange
+from tqdm import tqdm
 
 def extract_embedding(data_loaders, dataset, model, fm='arcface', level=4):
     model.eval()

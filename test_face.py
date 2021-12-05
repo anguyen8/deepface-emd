@@ -1,17 +1,9 @@
-import os, sys, numpy as np
+import os
 import argparse
-from numpy.lib.npyio import load
 import torch
-import torch.nn.functional as F
 import torch.multiprocessing
-import glob
+from tqdm import trange
 from PIL import Image
-from tqdm import tqdm, trange
-from torchvision import transforms
-import torchvision
-from PIL import Image
-import matplotlib.pyplot as plt
-import timeit
 
 torch.multiprocessing.set_sharing_strategy('file_system')
 

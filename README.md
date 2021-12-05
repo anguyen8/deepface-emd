@@ -10,6 +10,7 @@
 Python >= 3.5
 Pytorch > 1.0
 Opencv >= 3.4.4
+pip install tqmd
 ```
 
 ## Download datasets and models

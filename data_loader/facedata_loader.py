@@ -2,12 +2,8 @@ import os
 import numpy as np
 import cv2
 import torch
-from skimage import io
 from torch.utils.data import Dataset
 from torchvision import transforms
-from torchvision.transforms import functional as F
-import json
-import copy
 from PIL import Image
 
 def get_datadir(img_path):

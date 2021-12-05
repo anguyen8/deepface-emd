@@ -1,4 +1,3 @@
-import os, numpy as np
 import torch
 import torch.nn.functional as F
 import torch.multiprocessing

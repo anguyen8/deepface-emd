@@ -1,8 +1,5 @@
 import torch
 import torch.nn.functional as F
-import cv2
-import numpy as np
-from numpy import matlib as mb
 
 def Sinkhorn(K, u, v):
     r = torch.ones_like(u)
