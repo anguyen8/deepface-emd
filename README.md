@@ -66,9 +66,9 @@ ref_pts = [ [61.4356, 54.6963],[118.5318, 54.6963], [93.5252, 90.7366],[68.5493,
 crop_size = (160, 160)
 ```
 
-1. Create a folder including all persons (folders: name of person) and put it to '/data' 
-2. Create a `txt` file with format: `[image_path],[label]` of that folder (See [lfw file](data_files/full/lfw_128.txt) for details)
-3. Modify [face loader](data_loader/facedata_loader.py): Add your `txt` file in function: `get_face_dataloader`. 
+2. Create a folder including all persons (folders: name of person) and put it to '/data' 
+3. Create a `txt` file with format: `[image_path],[label]` of that folder (See [lfw file](data_files/full/lfw_128.txt) for details)
+4. Modify [face loader](data_loader/facedata_loader.py): Add your `txt` file in function: `get_face_dataloader`. 
 
 
 ## References
