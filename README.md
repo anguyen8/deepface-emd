@@ -27,20 +27,24 @@ mkdir pretrained
 3. Extract LFW datasets (e.g. `lfw_crop_96x112.tar.gz`) to `data/`
 4. Copy models (e.g. `resnet18_110.pth`) to `pretrained/` 
 
-## How to run small exmaples
-1. Run testing LFW images
-
+## How to run 
+ 
+1. Run small examples
+- Run testing LFW images
+  +  `-mask -sunglass -crop`: enable ood face data as query data.
 ```
 bash run_test.sh
 ```
 
-2. Run demo: The demo gives results of top-5 images of stage 1 and stage 2 (including flow visualization of EMD).
+- Run demo: The demo gives results of top-5 images of stage 1 and stage 2 (including flow visualization of EMD).
+  + `-mask`: input an normal face image in database, masked image is a query image.
+  + `-sunglass` and `-crop`: similar.   
 ```
 bash run_demo.sh
 ```
-## How to run full exmaples
+2. Run full exmaples
 
-Change `args.data_folder` to `data` in `.sh` files.
+- Change `args.data_folder` to `data` in `.sh` files.
 
 ## Run visualization with two images
 
