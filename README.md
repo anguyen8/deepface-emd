@@ -38,7 +38,7 @@ bash run_test.sh
 ```
 bash run_demo.sh
 ```
-## How to run small exmaples
+## How to run full exmaples
 
 - Change `args.data_folder` to `data` in `.sh` files.
 
