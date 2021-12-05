@@ -20,7 +20,7 @@ parser.add_argument("-model_path", type=str, default="pretrained/resnet18_110.pt
 parser.add_argument("-l", type=int, default=4,help="level of grid size",)
 parser.add_argument("-in1", type=str, default='', help="First input image",)
 parser.add_argument("-in2", type=str, default='', help="Second input image",)
-parser.add_argument("-weight", type=bool, default=False, help="Showing weight only, otherwise grid images",)
+parser.add_argument("-weight", action='store_true', help="Showing weight only, otherwise grid images",)
 args = parser.parse_args()
 
 def main():

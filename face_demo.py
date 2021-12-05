@@ -1,16 +1,12 @@
-import os, numpy as np
+import os
 import torch
-import torch.nn.functional as F
 import torch.multiprocessing
 import argparse
 from torchvision import transforms
-import torchvision
-from tqdm import tqdm, trange
 from PIL import Image, ImageDraw
 from face_models.resnet import *
 from face_models.net_cos import *
 from utils.emd import emd_similarity
-from utils.heatmap import combine_img_heatmap, get_patch_location
 from utils.image import preprocessing, draw_grid_img
 from utils.extract_features import extract_embedding
 from data_loader.facedata_loader import get_face_dataloader
@@ -22,13 +18,13 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument("-method", type=str, default="apc",help="Method",)
 parser.add_argument("-fm", type=str, default="arcface",help="face model",)
-parser.add_argument("-gallery", type=str, default="calfw",help="face gallery",)
+parser.add_argument("-gallery", type=str, default="lfw",help="face gallery",)
 parser.add_argument("-model_path", type=str, default="pretrained/resnet18_110.pth", help="model path",)
 parser.add_argument("-l", type=int, default=4,help="level of grid size",)
 parser.add_argument("-query", type=str, default='', help="First input image",)
-parser.add_argument("-mask", type=int, default=0, help="If True, masked on",)
-parser.add_argument("-sunglass", type=int, default=0, help="If True, sunglass on",)
-parser.add_argument("-crop", type=int, default=0, help="If True, crop on",)
+parser.add_argument('-mask', action='store_true', help="If True, masked on",)
+parser.add_argument('-crop', action='store_true', help="If True, crop on",)
+parser.add_argument('-sunglass', action='store_true', help="If True, sunglass on",)
 parser.add_argument("-data_folder", type=str, default="data_small", help="dataset dir: data_small or data",)
 parser.add_argument("-query_person", type=str, default="Winona_Ryder", help="query name person",)
 args = parser.parse_args()
@@ -51,12 +47,10 @@ def main():
     data_dir = os.path.join(os.getcwd(), args.data_folder)
     if args.fm == 'arcface':
         size = (128, 128)
-        datasets = { 'lfw':['lfw128','lfw128_masked','lfw128_glass', 'lfw128_crop', '', ''],
-                    'calfw':['calfw160', 'mlfw112', 'calfw160_glass', 'calfw160_crop70']}
+        datasets = { 'lfw':['lfw128','lfw128_masked','lfw128_glass', 'lfw128_crop']}
     elif args.fm == 'cosface':
         size = (96, 112)
-        datasets = {'lfw':['lfw', 'mlfw96', 'lfw_glass', 'lfw_crop70', '', 'talfw'],
-                    'calfw': ['calfw96','calfw96_masked','calfw96_glass','calfw96_crop70']}
+        datasets = {'lfw':['lfw', 'lfw96_mask', 'lfw96_glass', 'lfw96_crop']}
     else:
         print('No face model found')
         exit(0)

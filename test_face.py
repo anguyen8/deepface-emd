@@ -23,10 +23,9 @@ parser = argparse.ArgumentParser(
 parser.add_argument("-method", type=str, default="apc",help="Method",)
 parser.add_argument("-fm", type=str, default="sphereface",help="face model",)
 parser.add_argument("-l", type=int, default=4,help="level of grid size",)
-parser.add_argument("-mask", type=int, default=0, help="If True, masked on",)
-parser.add_argument("-crop", type=int, default=0, help="If True, crop on",)
-parser.add_argument("-sunglass", type=int, default=0, help="If True, sunglass on",)
-parser.add_argument("-r", type=int, default=0, help="If True, remove identical image",)
+parser.add_argument('-mask', action='store_true', help="If True, masked on",)
+parser.add_argument('-crop', action='store_true', help="If True, crop on",)
+parser.add_argument('-sunglass', action='store_true', help="If True, sunglass on",)
 parser.add_argument("-a", type=float, default=0.0, help="scale for emd: alpha",)
 parser.add_argument("-d", type=str, default="lfw", help="dataset",)
 parser.add_argument("-data_folder", type=str, default="data_small", help="dataset dir: data_small or data",)
@@ -103,7 +102,7 @@ def main():
     for idx in trange(len(feature_bank_query)):
         anchor_center = feature_bank_center_query[idx]
         approx_sim, _, _, _ = emd_similarity(None, anchor_center, None, feature_bank_center_gallery, 0)
-        if query_data == gallery_data or args.r:
+        if query_data == gallery_data:
             approx_sim[idx] = -100
         approx_tops = torch.argsort(approx_sim, descending=True)
         if max(stages) > 0:
