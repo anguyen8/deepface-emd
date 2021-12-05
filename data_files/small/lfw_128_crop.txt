@@ -1,0 +1,10 @@
+lfw-align-128-crop70/Roberto_Carlos/Roberto_Carlos_0001.jpg,0
+lfw-align-128-crop70/Roberto_Carlos/Roberto_Carlos_0004.jpg,0
+lfw-align-128-crop70/Alvaro_Uribe/Alvaro_Uribe_0033.jpg,1
+lfw-align-128-crop70/Alvaro_Uribe/Alvaro_Uribe_0012.jpg,1
+lfw-align-128-crop70/Monica_Seles/Monica_Seles_0003.jpg,2
+lfw-align-128-crop70/Monica_Seles/Monica_Seles_0001.jpg,2
+lfw-align-128-crop70/Heather_Mills/Heather_Mills_0001.jpg,3
+lfw-align-128-crop70/Heather_Mills/Heather_Mills_0002.jpg,3
+lfw-align-128-crop70/Iain_Duncan_Smith/Iain_Duncan_Smith_0002.jpg,4
+lfw-align-128-crop70/Iain_Duncan_Smith/Iain_Duncan_Smith_0001.jpg,4
