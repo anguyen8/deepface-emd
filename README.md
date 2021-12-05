@@ -54,3 +54,8 @@ python visualize_faces.py -method [methods] -fm [face models] -model_path [model
 - Modify [face loader](data_loader/facedata_loader.py): Add your `txt` file in function: `get_face_dataloader`. 
 
 
+## References
+- [DIML](https://github.com/wl-zhao/DIML)
+- [Arcface Pytorch](https://github.com/ronghuaiyang/arcface-pytorch)
+- [CosFace Pytorch](https://github.com/MuggleWang/CosFace_pytorch)
+- [FaceNet Pytorch](https://github.com/timesler/facenet-pytorch)
