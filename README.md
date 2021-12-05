@@ -55,7 +55,7 @@ python visualize_faces.py -method [methods] -fm [face models] -model_path [model
 
 
 ## References
-- [DIML](https://github.com/wl-zhao/DIML)
-- [Arcface Pytorch](https://github.com/ronghuaiyang/arcface-pytorch)
-- [CosFace Pytorch](https://github.com/MuggleWang/CosFace_pytorch)
-- [FaceNet Pytorch](https://github.com/timesler/facenet-pytorch)
+1. W. Zhao, Y. Rao, Z. Wang, J. Lu, Zhou.   Towards interpretable deep metric learning withstructural matching. ICCV 2021 [DIML](https://github.com/wl-zhao/DIML)
+2. J.  Deng,   J. Guo,   X. Niannan,   and   StefanosZafeiriou.   Arcface:  Additive angular margin loss for deepface recognition. CVPR 2019.[Arcface Pytorch](https://github.com/ronghuaiyang/arcface-pytorch)
+3. H.  Wang,  Y. Wang,  Z. Zhou,  X. Ji,  DihongGong,  J. Zhou,  Z. Li,  W. Liu.   Cosface:Large margin cosine loss for deep face recognition. CVPR 2018 [CosFace Pytorch](https://github.com/MuggleWang/CosFace_pytorch)
+4. F. Schroff,  D. Kalenichenko, J. Philbin.Facenet: A unified embedding for face recognition and clus-tering. CVPR 2015 [FaceNet Pytorch](https://github.com/timesler/facenet-pytorch)
