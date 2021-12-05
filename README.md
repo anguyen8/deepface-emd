@@ -14,7 +14,7 @@ Opencv >= 3.4.4
 
 ## Download datasets and models
 
-- Download LFW, out-of-distribution of LFW, and models: ![Google Drive](https://drive.google.com/drive/folders/1hoyO7IWaIx2Km-pe4-Sn2D_uTFNLC7Ph)
+- Download LFW, out-of-distribution of LFW, and models: [Google Drive](https://drive.google.com/drive/folders/1hoyO7IWaIx2Km-pe4-Sn2D_uTFNLC7Ph)
 
 - Create the following folders:
 
