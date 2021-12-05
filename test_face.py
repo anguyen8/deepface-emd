@@ -7,9 +7,9 @@ from PIL import Image
 
 torch.multiprocessing.set_sharing_strategy('file_system')
 
-from face_models.facenet_pytorch import InceptionResnetV1
 from face_models.resnet import *
 from face_models.net_cos import *
+from face_models.facenet import InceptionResnetV1
 from utils.emd import emd_similarity
 from utils.metrics import get_metrics_rank
 from utils.extract_features import extract_embedding
@@ -84,7 +84,9 @@ def main():
         model = sphere()
         model.load_state_dict(torch.load(model_path))
     elif args.fm == 'facenet':
-        model = InceptionResnetV1(pretrained='vggface2')
+        model_path = 'pretrained/20180402-114759-vggface2.pt'
+        model = InceptionResnetV1()
+        model.load_state_dict(torch.load(model_path))
     
     model.eval()
     model = nn.DataParallel(model)
