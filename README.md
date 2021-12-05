@@ -13,34 +13,34 @@ Opencv >= 3.4.4
 pip install tqmd
 ```
 
-## Download datasets and models
+## Download datasets and pretrained models
 
-- Download LFW, out-of-distribution of LFW, and models: [Google Drive](https://drive.google.com/drive/folders/1hoyO7IWaIx2Km-pe4-Sn2D_uTFNLC7Ph)
+1. Download LFW, out-of-distribution of LFW, and pretrained models: [Google Drive](https://drive.google.com/drive/folders/1hoyO7IWaIx2Km-pe4-Sn2D_uTFNLC7Ph)
 
-- Create the following folders:
+2. Create the following folders:
 
 ```
 mkdir data
 mkdir pretrained
 ```
 
-- Extract LFW datasets (e.g. `lfw_crop_96x112.tar.gz`) to `data/`
-- Copy models (e.g. `resnet18_110.pth`) to `pretrained/` 
+3. Extract LFW datasets (e.g. `lfw_crop_96x112.tar.gz`) to `data/`
+4. Copy models (e.g. `resnet18_110.pth`) to `pretrained/` 
 
 ## How to run small exmaples
-- Run testing LFW images
+1. Run testing LFW images
 
 ```
 bash run_test.sh
 ```
 
-- Run demo: The demo gives results of top-5 images of stage 1 and stage 2.
+2. Run demo: The demo gives results of top-5 images of stage 1 and stage 2 (including flow visualization of EMD).
 ```
 bash run_demo.sh
 ```
 ## How to run full exmaples
 
-- Change `args.data_folder` to `data` in `.sh` files.
+Change `args.data_folder` to `data` in `.sh` files.
 
 ## Run visualization with two images
 
@@ -49,9 +49,22 @@ python visualize_faces.py -method [methods] -fm [face models] -model_path [model
 ```
 
 ## Modify with your own dataset.
-- Create a folder including all persons (folders: name of person) and put it to '/data' 
-- Create a `txt` file with format: `[image_path],[label]` of that folder (See [lfw file](data_files/full/lfw_128.txt) for details)
-- Modify [face loader](data_loader/facedata_loader.py): Add your `txt` file in function: `get_face_dataloader`. 
+1. Facial alignment. See [align_face.py](align_face.py) for details.
+- Install [face_alignment](https://github.com/1adrianb/face-alignment) to extract landmarks. 
+```
+pip install scikit-image
+pip install face-alignment
+
+```
+- For make crop size of `160x160` for Arcface (`128x128`) and FaceNet (`160x160`), we change reference points as follow.
+```python
+ref_pts = [ [61.4356, 54.6963],[118.5318, 54.6963], [93.5252, 90.7366],[68.5493, 122.3655],[110.7299, 122.3641]]
+crop_size = (160, 160)
+```
+
+2. Create a folder including all persons (folders: name of person) and put it to '/data' 
+3. Create a `txt` file with format: `[image_path],[label]` of that folder (See [lfw file](data_files/full/lfw_128.txt) for details)
+4. Modify [face loader](data_loader/facedata_loader.py): Add your `txt` file in function: `get_face_dataloader`. 
 
 
 ## References
