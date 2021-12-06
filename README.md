@@ -1,11 +1,20 @@
 ## DeepFace-EMD: Re-ranking Using Patch-wise Earth Mover’s Distance Improves Out-Of-Distribution Face Identification
 
-`Official Implementation` for the paper "DeepFace-EMD: Re-ranking Using Patch-wise Earth Mover’s Distance Improves Out-Of-Distribution Face Identification" , by Hai Phan and Anh Nguyen.
+`Official Implementation` for the paper _DeepFace-EMD: Re-ranking Using Patch-wise Earth Mover’s Distance Improves Out-Of-Distribution Face Identification_ (2021) by Hai Phan and Anh Nguyen.
+
+**If you use this software, please consider citing:**
+
+    @article{hai2021deepface,
+      title={DeepFace-EMD: Re-ranking Using Patch-wise Earth Mover’s Distance Improves Out-Of-Distribution Face Identification},
+      author={Hai Phan, Anh Nguyen},
+      journal={arXiv preprint},
+      year={2021}
+    }
 
 ![](figs/framework.png) 
 ![](figs/results.png) 
 
-## Requirements
+## 1. Requirements
 ```
 Python >= 3.5
 Pytorch > 1.0
@@ -13,7 +22,7 @@ Opencv >= 3.4.4
 pip install tqmd
 ```
 
-## Download datasets and pretrained models
+## 2. Download datasets and pretrained models
 
 1. Download LFW, out-of-distribution of LFW, and pretrained models: [Google Drive](https://drive.google.com/drive/folders/1hoyO7IWaIx2Km-pe4-Sn2D_uTFNLC7Ph?usp=sharing)
 
@@ -27,7 +36,7 @@ mkdir pretrained
 3. Extract LFW datasets (e.g. `lfw_crop_96x112.tar.gz`) to `data/`
 4. Copy models (e.g. `resnet18_110.pth`) to `pretrained/` 
 
-## How to run 
+## 3. How to run 
  
 1. Run small examples
 - Run testing LFW images
@@ -47,7 +56,7 @@ bash run_test.sh
 
 - Change `args.data_folder` to `data` in `.sh` files.
 
-## Run visualization with two images
+### 3.1 Run visualization with two images
 
 ```
 python visualize_faces.py -method [methods] -fm [face models] -model_path [model dir] -in1 [1st image] -in2 [2nd image] -weight [1/0: showing weight heatmaps] 
@@ -57,7 +66,7 @@ The results are in `results/flow` and `results/heatmap` (if `-weight` flag is on
 ![](results/flows/daniel_radcliffe_flow_face.jpg) 
 ![](results/heatmap/daniel_radcliffe_heatmap_face.jpg) 
 
-## Modify with your own dataset.
+### 3.2 Modify with your own dataset.
 1. Facial alignment. See [align_face.py](alignment/align_face.py) for details.
 - Install [face_alignment](https://github.com/1adrianb/face-alignment) to extract landmarks. 
 ```
@@ -74,8 +83,10 @@ crop_size = (160, 160)
 3. Create a `txt` file with format: `[image_path],[label]` of that folder (See [lfw file](data_files/full/lfw_128.txt) for details)
 4. Modify [face loader](data_loader/facedata_loader.py): Add your `txt` file in function: `get_face_dataloader`. 
 
+## 4. License
+MIT
 
-## References
+## 5. References
 1. W. Zhao, Y. Rao, Z. Wang, J. Lu, Zhou. Towards interpretable deep metric learning with structural matching, ICCV 2021 [DIML](https://github.com/wl-zhao/DIML)
 2. J.  Deng,   J. Guo,   X. Niannan,   and   StefanosZafeiriou.   Arcface:  Additive angular margin loss for deepface recognition, CVPR 2019 [Arcface Pytorch](https://github.com/ronghuaiyang/arcface-pytorch)
 3. H.  Wang,  Y. Wang,  Z. Zhou,  X. Ji,  DihongGong,  J. Zhou,  Z. Li,  W. Liu.   Cosface: Large margin cosine loss for deep face recognition, CVPR 2018 [CosFace Pytorch](https://github.com/MuggleWang/CosFace_pytorch)
