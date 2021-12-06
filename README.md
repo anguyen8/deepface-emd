@@ -60,7 +60,6 @@ python visualize_faces.py -method [methods] -fm [face models] -model_path [model
 ```
 pip install scikit-image
 pip install face-alignment
-
 ```
 - For making face alignment with size of `160x160` for Arcface (`128x128`) and FaceNet (`160x160`), the reference points are as follow (see function `alignment` in [align_face.py](alignment/align_face.py)).
 ```python
