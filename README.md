@@ -51,8 +51,8 @@ bash run_demo.sh
 ```
 python visualize_faces.py -method [methods] -fm [face models] -model_path [model dir] -in1 [1st image] -in2 [2nd image] -weight [1/0: showing weight heatmaps] 
 ```
-![](results/flows/flow_face.jpg) 
-![](results/heatmap/heatmap_face.jpg) 
+![](results/flows/daniel_radcliffe_flow_face.jpg) 
+![](results/heatmap/daniel_radcliffe_heatmap_face.jpg) 
 
 ## Modify with your own dataset.
 1. Facial alignment. See [align_face.py](alignment/align_face.py) for details.
