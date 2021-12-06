@@ -60,7 +60,7 @@ pip install scikit-image
 pip install face-alignment
 
 ```
-- For make crop size of `160x160` for Arcface (`128x128`) and FaceNet (`160x160`), the reference points are as follow.
+- For making face alignment with size of `160x160` for Arcface (`128x128`) and FaceNet (`160x160`), the reference points are as follow (see function `alignment` in [align_face.py](alignment/align_face.py)).
 ```python
 ref_pts = [ [61.4356, 54.6963],[118.5318, 54.6963], [93.5252, 90.7366],[68.5493, 122.3655],[110.7299, 122.3641]]
 crop_size = (160, 160)
