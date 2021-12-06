@@ -39,9 +39,10 @@ bash run_test.sh
 - Run demo: The demo gives results of top-5 images of stage 1 and stage 2 (including flow visualization of EMD).
   + `-mask`: input an normal face image in database, masked image is a query image.
   + `-sunglass` and `-crop`: similar.   
-```
-bash run_demo.sh
-```
+  + The results are in `results/demo`
+  ```
+  bash run_demo.sh
+  ```
 2. Run full exmaples
 
 - Change `args.data_folder` to `data` in `.sh` files.
@@ -51,6 +52,8 @@ bash run_demo.sh
 ```
 python visualize_faces.py -method [methods] -fm [face models] -model_path [model dir] -in1 [1st image] -in2 [2nd image] -weight [1/0: showing weight heatmaps] 
 ```
+The results are in `results/flow` and `results/heatmap` (if `-weight` flag is on).
+
 ![](results/flows/daniel_radcliffe_flow_face.jpg) 
 ![](results/heatmap/daniel_radcliffe_heatmap_face.jpg) 
 
