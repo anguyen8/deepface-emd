@@ -20,7 +20,7 @@ parser = argparse.ArgumentParser(
 )
 
 
-parser.add_argument("-method", type=str, default="apc",help="Method",)
+parser.add_argument("-method", type=str, default="apc",help="Methods: uniform, apc, and sc",)
 parser.add_argument("-fm", type=str, default="sphereface",help="face model",)
 parser.add_argument("-l", type=int, default=4,help="level of grid size",)
 parser.add_argument('-mask', action='store_true', help="If True, masked on",)
@@ -34,9 +34,7 @@ args = parser.parse_args()
 
 def main():
     print("args = {}".format(args))
-    data_dir = ''
-    if args.data_folder == 'data_small':
-        data_dir = os.path.join(os.getcwd(), args.data_folder)
+    data_dir = os.path.join(os.getcwd(), args.data_folder)
         
     print('dataset dir: {}'.format(data_dir))
     if args.fm == 'arcface':

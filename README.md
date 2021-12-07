@@ -52,9 +52,10 @@ bash run_test.sh
   ```
   bash run_demo.sh
   ```
-2. Run full exmaples
+1. Run full exmaples
 
 - Change `args.data_folder` to `data` in `.sh` files.
+- To reproduce results in Tab. 1 in the paper, you can use flag: `-crop` with `LFW` dataset.
 
 ### 3.1 Run visualization with two images
 
