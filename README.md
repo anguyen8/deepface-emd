@@ -70,6 +70,17 @@ bash run_test.sh
   ```
   python test_face.py -method apc -fm arcface -d lfw -a 0.7 -data_folder data -l 4 -crop 
   ```
+  
+- For other OOD datasets, run this following command:
+  + LFW-mask:
+  ```
+  python test_face.py -method apc -fm arcface -d lfw -a 0.7 -data_folder data -l 4 -mask 
+  ```
+  + LFW-sunglass:
+  ```
+  python test_face.py -method apc -fm arcface -d lfw -a 0.7 -data_folder data -l 4 -sunglass 
+  ```
+
 ### 3.1 Run visualization with two images
 
 ```
