@@ -57,10 +57,10 @@ bash run_test.sh
 - Change `args.data_folder` to `data` in `.sh` files.
 
 ### Reproduce results
-- Make sure `lfw-align-128-crop70` dataset in `data/` directory (e.g. `data/lfw-align-128-crop70`), arcface model `resnet18_110.pth` in `pretrained/` directory (e.g. `pretrained/resnet18_110.pth`). Run the following command to reproduce results in table 1
+- Make sure `lfw-align-128` and `lfw-align-128-crop70` dataset in `data/` directory (e.g. `data/lfw-align-128-crop70`), arcface model `resnet18_110.pth` in `pretrained/` directory (e.g. `pretrained/resnet18_110.pth`). Run the following command to reproduce results in table 1
   + Arguments: 
-    Methods can be `apc`, `uniform`, or `sc`
-    `-l`:4 or 8 for 4x4 and 8x8 respectively.
+      + Methods can be `apc`, `uniform`, or `sc`
+      + `-l`: 4 or 8 for 4x4 and 8x8 respectively.
 
   + Normal LFW with 1680 classes:
   ```
