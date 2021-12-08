@@ -53,9 +53,8 @@ bash run_test.sh
   ```
   bash run_demo.sh
   ```
-1. Run full exmaples
-
-- Change `args.data_folder` to `data` in `.sh` files.
+- Run full exmaples
+  + Change `args.data_folder` to `data` in `.sh` files.
 
 ### 3.3 Reproduce results
 - Make sure `lfw-align-128` and `lfw-align-128-crop70` dataset in `data/` directory (e.g. `data/lfw-align-128-crop70`), arcface model `resnet18_110.pth` in `pretrained/` directory (e.g. `pretrained/resnet18_110.pth`). Run the following command to reproduce results in table 1
