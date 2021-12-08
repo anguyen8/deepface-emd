@@ -38,15 +38,14 @@ mkdir pretrained
 
 ## 3. How to run 
  
-### 3.1 Run small examples
+### 3.1 Run examples
 - Run testing LFW images
   +  `-mask -sunglass -crop`: enable ood face data as query data.
-```
-bash run_test.sh
-```
+  ```
+  bash run_test.sh
+  ```
 
-### 3.2 Run demo: 
-- The demo gives results of top-5 images of stage 1 and stage 2 (including flow visualization of EMD).
+- Run demo: The demo gives results of top-5 images of stage 1 and stage 2 (including flow visualization of EMD).
   + `-mask`: input an normal face image in database, masked image is a query image.
   + `-sunglass` and `-crop`: similar.   
   + The results are in `results/demo`
@@ -56,7 +55,7 @@ bash run_test.sh
 - Run full exmaples
   + Change `args.data_folder` to `data` in `.sh` files.
 
-### 3.3 Reproduce results
+### 3.2 Reproduce results
 - Make sure `lfw-align-128` and `lfw-align-128-crop70` dataset in `data/` directory (e.g. `data/lfw-align-128-crop70`), arcface model `resnet18_110.pth` in `pretrained/` directory (e.g. `pretrained/resnet18_110.pth`). Run the following command to reproduce results in table 1
   + Arguments: 
       + Methods can be `apc`, `uniform`, or `sc`
@@ -83,7 +82,7 @@ bash run_test.sh
   python test_face.py -method apc -fm arcface -d lfw -a 0.7 -data_folder data -l 4 -sunglass 
   ```
 
-### 3.4 Run visualization with two images
+### 3.3 Run visualization with two images
 
 ```
 python visualize_faces.py -method [methods] -fm [face models] -model_path [model dir] -in1 [1st image] -in2 [2nd image] -weight [1/0: showing weight heatmaps] 
@@ -93,7 +92,7 @@ The results are in `results/flow` and `results/heatmap` (if `-weight` flag is on
 ![](results/flows/daniel_radcliffe_flow_face.jpg) 
 ![](results/heatmap/daniel_radcliffe_heatmap_face.jpg) 
 
-### 3.5 Modify with your own dataset.
+### 3.4 Modify with your own dataset.
 1. Facial alignment. See [align_face.py](alignment/align_face.py) for details.
 - Install [face_alignment](https://github.com/1adrianb/face-alignment) to extract landmarks. 
 ```
