@@ -61,6 +61,7 @@ bash run_test.sh
   + Arguments: 
       + Methods can be `apc`, `uniform`, or `sc`
       + `-l`: 4 or 8 for `4x4` and `8x8` respectively.
+      + `-a`: alpha parameter mentioned in the paper.
 
   + Normal LFW with 1680 classes:
   ```
@@ -70,6 +71,7 @@ bash run_test.sh
   ```
   python test_face.py -method apc -fm arcface -d lfw -a 0.7 -data_folder data -l 4 -crop 
   ```
+  * Note: Full LFW dataset have `5749` people wit `13,233` images and only `1680` people with two or more images (See [LFW](http://vis-www.cs.umass.edu/lfw/) for details). However, in our normal LFW dataset, the identical images will not be considered in Face Identification Identification. So, the difference between `lfw` and `lfw_1680` is that `lfw` is full LFW (including people with single image) and `lfw_1680` includes 1680 people who have one or two images.     
 
 - For other OOD datasets, run this following command:
   + LFW-mask:
