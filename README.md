@@ -52,11 +52,24 @@ bash run_test.sh
   ```
   bash run_demo.sh
   ```
-1. Run full exmaples
+2. Run full exmaples
 
 - Change `args.data_folder` to `data` in `.sh` files.
-- To reproduce results in Tab. 1 in the paper, you can use flag: `-crop` with `LFW` dataset.
 
+### Reproduce results
+- Make sure `lfw-align-128-crop70` dataset in `data/` directory (e.g. `data/lfw-align-128-crop70`), arcface model `resnet18_110.pth` in `pretrained/` directory (e.g. `pretrained/resnet18_110.pth`). Run the following command to reproduce results in table 1
+  + Arguments: 
+    Methods can be `apc`, `uniform`, or `sc`
+    `-l`:4 or 8 for 4x4 and 8x8 respectively.
+
+  + Normal LFW with 1680 classes:
+  ```
+  python test_face.py -method apc -fm arcface -d lfw_1680 -a -1 -data_folder data -l 4
+  ```
+  + LFW-crop:
+  ```
+  python test_face.py -method apc -fm arcface -d lfw -a 0.7 -data_folder data -l 4 -crop 
+  ```
 ### 3.1 Run visualization with two images
 
 ```

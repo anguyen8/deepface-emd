@@ -39,7 +39,8 @@ def main():
     print('dataset dir: {}'.format(data_dir))
     if args.fm == 'arcface':
         size = (128, 128)
-        datasets = { 'lfw':['lfw128','lfw128_masked','lfw128_glass', 'lfw128_crop']}
+        datasets = { 'lfw':['lfw128','lfw128_masked','lfw128_glass', 'lfw128_crop'],
+                    'lfw_1680':['lfw128_1680']}
     elif args.fm == 'cosface':
         size = (112, 96)
         datasets = {'lfw':['lfw', 'lfw96_mask', 'lfw96_glass', 'lfw96_crop']

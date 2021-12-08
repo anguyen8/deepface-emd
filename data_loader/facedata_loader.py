@@ -92,6 +92,7 @@ def get_face_dataloader(batch_size, data_dir='', folder='', fm='arcface', num_wo
     else:
         filedir = 'data_files/full' 
         lfw_128_File = os.path.join(filedir, 'lfw_128.txt')
+        lfw_128_1680_File = os.path.join(filedir, 'lfw_128x128_1680.txt')
         lfw_128_mask_File = os.path.join(filedir, 'lfw_128_masked_label.txt')
         lfw_128_glass_File = os.path.join(filedir, 'lfw_128_glass.txt')
         lfw_128_crop_File = os.path.join(filedir, 'lfw_128_crop70.txt')
@@ -104,6 +105,7 @@ def get_face_dataloader(batch_size, data_dir='', folder='', fm='arcface', num_wo
 
         face_dataset = {
             'lfw128':FaceDataset(lfw_128_File, data_dir=data_dir,  fm=fm, level=level, size=size, resize=True),
+            'lfw128_1680':FaceDataset(lfw_128_1680_File, data_dir=data_dir,  fm=fm, level=level, size=size, resize=True),
             'lfw128_masked':FaceDataset(lfw_128_mask_File, data_dir=data_dir, fm=fm, level=level, size=size, resize=True),
             'lfw128_glass':FaceDataset(lfw_128_glass_File, data_dir=data_dir, fm=fm, level=level, size=size, resize=True),
             'lfw128_crop':FaceDataset(lfw_128_crop_File, data_dir=data_dir, fm=fm, level=level, size=size, resize=True),
@@ -114,7 +116,7 @@ def get_face_dataloader(batch_size, data_dir='', folder='', fm='arcface', num_wo
             'lfw96_crop':FaceDataset(lfw_96_crop, data_dir=data_dir, fm=fm, level=level, size=size, resize=True),
         }
 
-        data_list = ['lfw',  'lfw128', 'lfw128_masked', 'lfw128_glass', 'lfw128_crop', 'lfw96_mask', 'lfw96_glass', 'lfw96_crop']
+        data_list = ['lfw',  'lfw128', 'lfw128_1680', 'lfw128_masked', 'lfw128_glass', 'lfw128_crop', 'lfw96_mask', 'lfw96_glass', 'lfw96_crop']
 
     dataloaders = {
         x: torch.utils.data.DataLoader(face_dataset[x], batch_size=batch_size, shuffle=False, num_workers=num_workers) 
