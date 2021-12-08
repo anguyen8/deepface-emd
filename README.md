@@ -14,6 +14,7 @@
 ![](figs/framework.png) 
 ![](figs/results.png) 
 
+
 ## 1. Requirements
 ```
 Python >= 3.5
@@ -48,7 +49,7 @@ mkdir pretrained
 - Run demo: The demo gives results of top-5 images of stage 1 and stage 2 (including flow visualization of EMD).
   + `-mask`: image retrieval using a masked-face query image given a gallery of normal LFW images.
   + `-sunglass` and `-crop`: similar to the setup of `-mask`.
-  + The results will be saved in the `results/demo` directory.
+  + The results will be saved in the [results/demo](https://github.com/anguyen8/deepface-emd/tree/main/results/demo) directory.
   ```
   bash run_demo.sh
   ```
@@ -56,7 +57,7 @@ mkdir pretrained
   + Set the argument `args.data_folder` to `data` in `.sh` files.
 
 ### 3.2 Reproduce results
-- Make sure `lfw-align-128` and `lfw-align-128-crop70` dataset in `data/` directory (e.g. `data/lfw-align-128-crop70`), ArcFace [2] model `resnet18_110.pth` in `pretrained/` directory (e.g. `pretrained/resnet18_110.pth`). Run the following command to reproduce results in table 1
+- Make sure `lfw-align-128` and `lfw-align-128-crop70` dataset in `data/` directory (e.g. `data/lfw-align-128-crop70`), ArcFace [2] model `resnet18_110.pth` in `pretrained/` directory (e.g. `pretrained/resnet18_110.pth`). Run the following commands to reproduce the Table 1 results in our paper.
   + Arguments: 
       + Methods can be `apc`, `uniform`, or `sc`
       + `-l`: 4 or 8 for `4x4` and `8x8` respectively.
@@ -70,9 +71,9 @@ mkdir pretrained
   ```
   python test_face.py -method apc -fm arcface -d lfw -a 0.7 -data_folder data -l 4 -crop 
   ```
-  * Note: Full LFW dataset have `5749` people wit `13,233` images and only `1680` people with two or more images (See [LFW](http://vis-www.cs.umass.edu/lfw/) for details). However, in our normal LFW dataset, the identical images will not be considered in Face Identification Identification. So, the difference between `lfw` and `lfw_1680` is that `lfw` is full LFW (including people with single image) and `lfw_1680` includes 1680 people who have two or more images.     
+  * Note: The full LFW dataset have 5,749 people for a total of 13,233 images; however, only 1,680 people have two or more images (See [LFW](http://vis-www.cs.umass.edu/lfw/) for details). However, in our normal LFW dataset, the identical images will not be considered in face identification. So, the difference between `lfw` and `lfw_1680` is that the `lfw` setup uses the full LFW (including people with a single image) but the `lfw_1680` uses only 1,680 people who have two or more images.     
 
-- For other OOD datasets, run this following command:
+- For other OOD datasets, run the following command:
   + LFW-mask:
   ```
   python test_face.py -method apc -fm arcface -d lfw -a 0.7 -data_folder data -l 4 -mask 
@@ -87,12 +88,12 @@ mkdir pretrained
 ```
 python visualize_faces.py -method [methods] -fm [face models] -model_path [model dir] -in1 [1st image] -in2 [2nd image] -weight [1/0: showing weight heatmaps] 
 ```
-The results are in `results/flow` and `results/heatmap` (if `-weight` flag is on).
+The results are in [results/flow](https://github.com/anguyen8/deepface-emd/tree/main/results/flows) and [results/heatmap](https://github.com/anguyen8/deepface-emd/tree/main/results/heatmap) (if `-weight` flag is on).
 
 ![](results/flows/daniel_radcliffe_flow_face.jpg) 
 ![](results/heatmap/daniel_radcliffe_heatmap_face.jpg) 
 
-### 3.4 Modify with your own dataset.
+### 3.4 Use your own images
 1. Facial alignment. See [align_face.py](alignment/align_face.py) for details.
 - Install [face_alignment](https://github.com/1adrianb/face-alignment) to extract landmarks. 
 ```
