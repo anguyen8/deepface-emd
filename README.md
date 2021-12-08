@@ -24,7 +24,7 @@ pip install tqmd
 
 ## 2. Download datasets and pretrained models
 
-1. Download LFW, out-of-distribution of LFW, and pretrained models: [Google Drive](https://drive.google.com/drive/folders/1hoyO7IWaIx2Km-pe4-Sn2D_uTFNLC7Ph?usp=sharing)
+1. Download LFW, _out-of-distribution_ (OOD) LFW test sets, and pretrained models: [Google Drive](https://drive.google.com/drive/folders/1hoyO7IWaIx2Km-pe4-Sn2D_uTFNLC7Ph?usp=sharing)
 
 2. Create the following folders:
 
@@ -40,23 +40,23 @@ mkdir pretrained
  
 ### 3.1 Run examples
 - Run testing LFW images
-  +  `-mask -sunglass -crop`: enable ood face data as query data.
+  +  `-mask`, `-sunglass`, `-crop`: flags for using corresponding OOD query images (i.e., faces with masks or sunglasses or randomly-cropped images).
   ```
   bash run_test.sh
   ```
 
 - Run demo: The demo gives results of top-5 images of stage 1 and stage 2 (including flow visualization of EMD).
-  + `-mask`: input an normal face image in database, masked image is a query image.
-  + `-sunglass` and `-crop`: similar.   
-  + The results are in `results/demo`
+  + `-mask`: image retrieval using a masked-face query image given a gallery of normal LFW images.
+  + `-sunglass` and `-crop`: similar to the setup of `-mask`.
+  + The results will be saved in the `results/demo` directory.
   ```
   bash run_demo.sh
   ```
-- Run full exmaples
-  + Change `args.data_folder` to `data` in `.sh` files.
+- Run retrieval using the full LFW gallery
+  + Set the argument `args.data_folder` to `data` in `.sh` files.
 
 ### 3.2 Reproduce results
-- Make sure `lfw-align-128` and `lfw-align-128-crop70` dataset in `data/` directory (e.g. `data/lfw-align-128-crop70`), arcface model `resnet18_110.pth` in `pretrained/` directory (e.g. `pretrained/resnet18_110.pth`). Run the following command to reproduce results in table 1
+- Make sure `lfw-align-128` and `lfw-align-128-crop70` dataset in `data/` directory (e.g. `data/lfw-align-128-crop70`), ArcFace [2] model `resnet18_110.pth` in `pretrained/` directory (e.g. `pretrained/resnet18_110.pth`). Run the following command to reproduce results in table 1
   + Arguments: 
       + Methods can be `apc`, `uniform`, or `sc`
       + `-l`: 4 or 8 for `4x4` and `8x8` respectively.
