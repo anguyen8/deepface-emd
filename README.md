@@ -60,7 +60,7 @@ bash run_test.sh
 - Make sure `lfw-align-128` and `lfw-align-128-crop70` dataset in `data/` directory (e.g. `data/lfw-align-128-crop70`), arcface model `resnet18_110.pth` in `pretrained/` directory (e.g. `pretrained/resnet18_110.pth`). Run the following command to reproduce results in table 1
   + Arguments: 
       + Methods can be `apc`, `uniform`, or `sc`
-      + `-l`: 4 or 8 for 4x4 and 8x8 respectively.
+      + `-l`: 4 or 8 for `4x4` and `8x8` respectively.
 
   + Normal LFW with 1680 classes:
   ```
@@ -70,7 +70,7 @@ bash run_test.sh
   ```
   python test_face.py -method apc -fm arcface -d lfw -a 0.7 -data_folder data -l 4 -crop 
   ```
-  
+
 - For other OOD datasets, run this following command:
   + LFW-mask:
   ```
