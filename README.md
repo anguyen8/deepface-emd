@@ -7,7 +7,7 @@
     @article{hai2021deepface,
       title={DeepFace-EMD: Re-ranking Using Patch-wise Earth Mover’s Distance Improves Out-Of-Distribution Face Identification},
       author={Hai Phan, Anh Nguyen},
-      journal={arXiv preprint},
+      journal={arXiv preprint arXiv:2112.04016},
       year={2021}
     }
 
