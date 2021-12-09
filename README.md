@@ -1,6 +1,6 @@
 ## DeepFace-EMD: Re-ranking Using Patch-wise Earth Mover’s Distance Improves Out-Of-Distribution Face Identification
 
-`Official Implementation` for the paper _DeepFace-EMD: Re-ranking Using Patch-wise Earth Mover’s Distance Improves Out-Of-Distribution Face Identification_ (2021) by Hai Phan and Anh Nguyen.
+`Official Implementation` for the paper [DeepFace-EMD: Re-ranking Using Patch-wise Earth Mover’s Distance Improves Out-Of-Distribution Face Identification](https://arxiv.org/abs/2112.04016) (2021) by Hai Phan and Anh Nguyen.
 
 **If you use this software, please consider citing:**
 
