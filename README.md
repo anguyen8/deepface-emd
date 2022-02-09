@@ -22,7 +22,7 @@
 Python >= 3.5
 Pytorch > 1.0
 Opencv >= 3.4.4
-pip install tqmd
+pip install tqdm
 ```
 
 ## 2. Download datasets and pretrained models
