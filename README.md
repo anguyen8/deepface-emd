@@ -1,4 +1,6 @@
 ## DeepFace-EMD: Re-ranking Using Patch-wise Earth Mover’s Distance Improves Out-Of-Distribution Face Identification
+tldr: Improving OOD face identification (e.g. on masked faces) by harnessing pre-trained face models for patch-wise similarity-based re-ranking. Accuracy improved without any further training and without synthetic or augmented data.
+
 
 **Official Implementation** for the paper [DeepFace-EMD: Re-ranking Using Patch-wise Earth Mover’s Distance Improves Out-Of-Distribution Face Identification](https://arxiv.org/abs/2112.04016) (2022) by Hai Phan and Anh Nguyen.
 
