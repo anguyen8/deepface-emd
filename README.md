@@ -114,6 +114,9 @@ crop_size = (160, 160)
 3. Create a `txt` file with format: `[image_path],[label]` of that folder (See [lfw file](data_files/full/lfw_128.txt) for details)
 4. Modify [face loader](data_loader/facedata_loader.py): Add your `txt` file in function: `get_face_dataloader`. 
 
+### 3.5. Training on masked images
+See this [folder](https://github.com/anguyen8/deepface-emd/tree/main/arcface-pytorch) for the data and instructions for train on masked images following the experiments in [Sec. 4.3 Re-ranking rivals finetuning on masked images](https://arxiv.org/abs/2112.04016) in the paper.
+
 ## 4. License
 MIT
 
