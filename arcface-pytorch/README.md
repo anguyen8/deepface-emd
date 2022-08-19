@@ -11,6 +11,6 @@ Download cropped face and masked face datasets. [Google Drive](https://drive.goo
 python train_mask_face.py
 ```
 
-**References
+**References**
 1. [arcface-pytorch](https://github.com/ronghuaiyang/arcface-pytorch)
     
