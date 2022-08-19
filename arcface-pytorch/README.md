@@ -1,4 +1,4 @@
-## Training Face Mask
+## Finetuning ArcFace on masked images (Sec. 4.3 in the paper) 
 
 **Prepare data**:
 Download cropped face and masked face datasets. [Google Drive](https://drive.google.com/drive/folders/1hoyO7IWaIx2Km-pe4-Sn2D_uTFNLC7Ph?usp=sharing)
