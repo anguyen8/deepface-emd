@@ -1,7 +1,7 @@
 ## Finetuning ArcFace on masked images (Sec. 4.3 in the paper) 
 
 **Prepare data**:
-Download cropped face and masked face datasets. [Google Drive](https://drive.google.com/drive/folders/1hoyO7IWaIx2Km-pe4-Sn2D_uTFNLC7Ph?usp=sharing)
+Download cropped face and masked face datasets. [Google Drive](https://drive.google.com/drive/folders/1Tra0rpZMYiqEZT9gbxL2ECepDOd34R5R)
 
 **How to run**
 1. Put your cropped face and masked face data into the same folder. See file `casia_160x160.txt` for reference of these folders.
