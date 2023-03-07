@@ -91,4 +91,4 @@ def main():
 if __name__ == '__main__':
     main()
 
-# python visualize_faces_lmk.py -in1 ./Daniel_Radcliffe/Daniel_Radcliffe_0003.jpg -in2 ./Daniel_Radcliffe/Daniel_Radcliffe_0004.jpg -lmk_json_query ./Daniel_Radcliffe_lmk/Daniel_Radcliffe_0003.json -lmk_json_right ./Daniel_Radcliffe_lmk/Daniel_Radcliffe_0004.json
+# python visualize_faces_lmk.py -in1 ./test_inputs/Daniel_Radcliffe/Daniel_Radcliffe_0003.jpg -in2 ./test_inputs/Daniel_Radcliffe/Daniel_Radcliffe_0004.jpg -lmk_json_query ./test_inputs/Daniel_Radcliffe_lmk/Daniel_Radcliffe_0003.json -lmk_json_right ./test_inputs/Daniel_Radcliffe_lmk/Daniel_Radcliffe_0004.json
