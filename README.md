@@ -124,6 +124,8 @@ This demo allows one to interactively probe the standard MIPS search and also ou
 
 All the code to run this stream-lit app on your server (GPU required) is [here](https://github.com/anguyen8/deepface-emd/tree/main/demo/StyleFlow).
 
+![](figs/demo-screenshot.jpg)
+
 ## 5. License
 MIT
 
