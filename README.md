@@ -117,10 +117,17 @@ crop_size = (160, 160)
 ### 3.5. Training on masked images
 See this [folder](https://github.com/anguyen8/deepface-emd/tree/main/arcface-pytorch) for the data and instructions for train on masked images following the experiments in [Sec. 4.3 Re-ranking rivals finetuning on masked images](https://arxiv.org/abs/2112.04016) in the paper.
 
-## 4. License
+### 4. Demo
+
+Based on StyleGAN-2.0, we built a stream-lit-powered demo [video](https://www.youtube.com/watch?v=rESuo-su1bE) that allows users to first choose a real image and manipulate it (e.g. by adding masks, sunglasses or changing facial expression via StyleGAN) and then input it into our DeepFace-EMD system.
+This demo allows one to interactively probe the standard MIPS search and also our search systems and compare their robustness and accuracy qualitatively.
+
+All the code to run this stream-lit app on your server (GPU required) is [here](https://github.com/anguyen8/deepface-emd/tree/main/demo/StyleFlow).
+
+## 5. License
 MIT
 
-## 5. References
+## 6. References
 1. W. Zhao, Y. Rao, Z. Wang, J. Lu, Zhou. Towards interpretable deep metric learning with structural matching, ICCV 2021 [DIML](https://github.com/wl-zhao/DIML)
 2. J.  Deng,   J. Guo,   X. Niannan,   and   StefanosZafeiriou.   Arcface:  Additive angular margin loss for deepface recognition, CVPR 2019 [Arcface Pytorch](https://github.com/ronghuaiyang/arcface-pytorch)
 3. H.  Wang,  Y. Wang,  Z. Zhou,  X. Ji,  DihongGong,  J. Zhou,  Z. Li,  W. Liu.   Cosface: Large margin cosine loss for deep face recognition, CVPR 2018 [CosFace Pytorch](https://github.com/MuggleWang/CosFace_pytorch)
